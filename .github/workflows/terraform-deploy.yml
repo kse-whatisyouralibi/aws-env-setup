@@ -32,9 +32,7 @@ jobs:
         uses: bridgecrewio/checkov-action@v12
         with:
           directory: infra
-          framework: terraform
-          external_checks_dirs: check/custom_checks
-          external_checks_dirs: check/custom_checks
+          framework: terraform          external_checks_dirs: check/custom_checks
           output_format: sarif
           output_file_path: checkov-results.sarif
 
@@ -123,9 +121,7 @@ jobs:
         uses: bridgecrewio/checkov-action@v12
         with:
           directory: infra
-          framework: terraform
-          external_checks_dirs: check/custom_checks
-          external_checks_dirs: check/custom_checks
+          framework: terraform          external_checks_dirs: check/custom_checks
           output_format: sarif
           output_file_path: checkov-results.sarif
         continue-on-error: true
