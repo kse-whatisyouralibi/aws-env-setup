@@ -104,6 +104,8 @@ resource "aws_instance" "web" {
   EOF
 
   tags = {
-    Name = "${local.prefix}-web"
+    Name        = "${local.prefix}-web"
+    Owner       = "emir"
+    Environment = "dev"
   }
 }
