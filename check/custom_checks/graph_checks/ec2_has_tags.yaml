@@ -1,0 +1,18 @@
+metadata:
+  id: "CUSTOM_GRAPH_5"
+  name: "Ensure EC2 instances have required tags (Owner, Environment)"
+  category: "GENERAL_SECURITY"
+  severity: "MEDIUM"
+
+definition:
+  and:
+    - cond_type: "attribute"
+      resource_types:
+        - "aws_instance"
+      attribute: "tags.Owner"
+      operator: "exists"
+    - cond_type: "attribute"
+      resource_types:
+        - "aws_instance"
+      attribute: "tags.Environment"
+      operator: "exists"
